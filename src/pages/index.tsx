@@ -19,7 +19,7 @@ export default function Home() {
         varius elit, id aliquam mi. Donec tincidunt ante massa, nec tempor sem
         lobortis eu.
       </div>
-      <div className="text-crimsonDark-700">
+      <div className="bg-crimson-500 text-crimson-700">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi
         eros, lacinia in ligula eu, tincidunt ultricies magna. Donec id tempus
         purus. Nullam sit amet enim neque. Maecenas lacinia suscipit diam, id
