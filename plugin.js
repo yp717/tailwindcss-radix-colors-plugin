@@ -5,7 +5,7 @@ const colors = {
     100: "green",
   },
   "dark-grass": {
-    100: "darkgreen",
+    100: "blue",
   },
   crimson: {
     100: "red",
