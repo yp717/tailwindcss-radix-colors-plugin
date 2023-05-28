@@ -48,7 +48,7 @@ const DarkModeToggle = () => {
 
   return (
     mounted && (
-      <div className="flex items-center align-center">
+      <div className="flex items-center align-center text-gray-1200">
         {theme === "dark" ? (
           <button
             className="w-6 h-6"

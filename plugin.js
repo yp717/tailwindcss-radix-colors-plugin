@@ -6,11 +6,9 @@ const tailwindRadixPlugin = plugin.withOptions(
   ({ colors = radix, rootSelector = ":root" } = {}) => {
     let rootColors = {};
     let darkModeColors = {};
-    const themeColors = {};
 
     for (const [colorName, colorObj] of Object.entries(colors)) {
       const colorMap = colorName.includes("Dark") ? darkModeColors : rootColors;
-      const themeColor = {};
 
       for (const [weight, value] of Object.entries(colorObj)) {
         const { hue, saturation, lightness, alpha } = parseHSLAColor(value);
@@ -21,12 +19,22 @@ const tailwindRadixPlugin = plugin.withOptions(
           cssVarName
         ] = `hsl(${hue}deg ${saturation}% ${lightness}% / ${alpha})`;
 
-        // Create the color in the Tailwind theme
-        const scale = weight.replace(colorName, "");
-        themeColor[scale] = `var(${cssVarName})`;
+        if (colorName.includes("Dark")) {
+          // For each Dark variant, create a CSS variable that will switch to it in dark mode
+          const cssVarNameSwitch = `--${colorName.replace(
+            "Dark",
+            ""
+          )}-${weight}`;
+          darkModeColors[cssVarNameSwitch] = `var(${cssVarName})`;
+        } else if (colorName.includes("Light")) {
+          // For each Light variant, create a CSS variable that will switch to it in light mode
+          const cssVarNameSwitch = `--${colorName.replace(
+            "Light",
+            ""
+          )}-${weight}`;
+          rootColors[cssVarNameSwitch] = `var(${cssVarName})`;
+        }
       }
-
-      themeColors[colorName] = themeColor;
     }
 
     return ({ addBase, config }) => {
@@ -53,10 +61,6 @@ const tailwindRadixPlugin = plugin.withOptions(
     const themeColors = {};
 
     for (const [colorName, colorObj] of Object.entries(colors)) {
-      if (colorName.includes("Dark")) {
-        continue;
-      }
-
       const themeColor = {};
       for (const key of Object.keys(colorObj)) {
         const scale = key.replace(colorName, "");
