@@ -1,6 +1,8 @@
 import DarkModeToggle from "@/components/DarkModeToggle";
 import { Inter } from "next/font/google";
 
+import radix from "@radix-ui/colors";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -9,7 +11,7 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center gap-24 p-24 ${inter.className}`}
     >
       <DarkModeToggle />
-      <div className="col-count-2 text-grass-100">
+      <div className="px-2 py-2 border-2 rounded-md bg-tomato-1000 text-tomato-100 dark:border-grass-1100">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi
         eros, lacinia in ligula eu, tincidunt ultricies magna. Donec id tempus
         purus. Nullam sit amet enim neque. Maecenas lacinia suscipit diam, id
@@ -19,7 +21,7 @@ export default function Home() {
         varius elit, id aliquam mi. Donec tincidunt ante massa, nec tempor sem
         lobortis eu.
       </div>
-      <div className="col-count-2 text-grass-100 dark:crimson-100">
+      <div className="text-crimson-1000">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi
         eros, lacinia in ligula eu, tincidunt ultricies magna. Donec id tempus
         purus. Nullam sit amet enim neque. Maecenas lacinia suscipit diam, id
