@@ -1,14 +1,40 @@
-# Turborepo starter
+# Tailwind Radix Plugin
 
-This is an official starter Turborepo.
+The package you've been looking for to use the Radix Color Palette in the most flexible way possible with TailwindCSS.
 
-## Using this example
-
-Run the following command:
+## Installation
 
 ```sh
-npx create-turbo@latest
+npm install tailwind-radix-plugin
 ```
+
+## Usage
+
+```js
+// tailwind.config.js
+module.exports = {
+  plugins: [require('tailwind-radix-plugin')],
+};
+```
+
+## Configuration
+
+```js
+// tailwind.config.js
+TBC
+```
+
+## How is this project built? (The Stack 🥞)
+
+- [Turborepo](https://turbo.build/repo/docs/) - A tool for building and managing monorepos
+- [Radix Color Palette](https://www.radix-ui.com/colors) - A color palette for UI design
+- [Next.js](https://nextjs.org/) - The React Framework for Production
+- [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs
+- [TypeScript](https://www.typescriptlang.org/) - TypeScript extends JavaScript by adding types
+- [ESLint](https://eslint.org/) - Find and fix problems in your JavaScript code
+- [Prettier](https://prettier.io) - An opinionated code formatter
+- [npm](https://www.npmjs.com/) - The package manager for the Node.js platform
+- [changesets](https://github.com/changesets/changesets) - A way to manage your versioning and changelogs with a focus on monorepos
 
 ## What's inside?
 
@@ -16,9 +42,8 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `docs`: The documentation site built  [Next.js](https://nextjs.org/) app
+- `ui`: a stub React component library for the `docs` applications
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 

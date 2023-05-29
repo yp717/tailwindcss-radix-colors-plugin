@@ -17,7 +17,7 @@
     "prettier": "^2.8.8",
     "turbo": "^1.9.7"
   },
-  "name": "my-turborepo",
+  "name": "tailwind-radix-plugin",
   "packageManager": "npm@9.4.2",
   "workspaces": [
     "apps/*",
