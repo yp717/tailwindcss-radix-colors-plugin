@@ -4,13 +4,17 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "lint:prettier": "turbo run lint:prettier",
+    "test:lint": "npm run test:eslint && npm run test:prettier",
+    "test:eslint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
+    "test:prettier": "prettier --check \"**/*.{ts,tsx,md}\"",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "@turbo/gen": "^1.9.7",
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
-    "prettier": "^2.5.1",
+    "prettier": "^2.8.8",
     "turbo": "^1.9.7"
   },
   "name": "my-turborepo",

@@ -1,57 +1,57 @@
-import * as React from "react";
+import * as React from 'react'
 
-import { useTheme } from "next-themes";
-import { m as motion } from "framer-motion";
+import { useTheme } from 'next-themes'
+import { m as motion } from 'framer-motion'
 
 const DarkModeToggle = () => {
-  const [mounted, setMounted] = React.useState(false);
-  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false)
+  const { theme, setTheme } = useTheme()
 
   React.useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   const handleThemeToggle = () => {
-    if (theme === "light") {
-      setTheme("dark");
+    if (theme === 'light') {
+      setTheme('dark')
     } else {
-      setTheme("light");
+      setTheme('light')
     }
-  };
+  }
 
   const variants = {
     initial: { scale: 1, rotate: 90 },
     animate: { scale: 1, rotate: 0 },
     whileTap: { scale: 1, rotate: 15 },
-  };
+  }
 
   // constants.ts
   const transition = {
-    type: "spring",
+    type: 'spring',
     stiffness: 200,
     damping: 10,
-  };
+  }
 
-  const whileTap = { scale: 1, rotate: 15 };
+  const whileTap = { scale: 1, rotate: 15 }
   const raysVariants = {
     initial: { rotate: 45 },
     animate: { rotate: 0, transition },
-  };
+  }
   const coreVariants = {
     initial: { scale: 1 },
     animate: { scale: 1, transition },
-  };
+  }
 
   if (!mounted) {
-    return <div className="w-6 h-6"></div>;
+    return <div className="h-6 w-6"></div>
   }
 
   return (
     mounted && (
-      <div className="flex items-center align-center text-gray-1200">
-        {theme === "dark" ? (
+      <div className="align-center text-gray-1200 flex items-center">
+        {theme === 'dark' ? (
           <button
-            className="w-6 h-6"
+            className="h-6 w-6"
             aria-label="Enable Light Mode"
             onClick={() => handleThemeToggle()}
           >
@@ -113,7 +113,7 @@ const DarkModeToggle = () => {
           </button>
         ) : (
           <button
-            className="w-6 h-6"
+            className="h-6 w-6"
             aria-label="Enable Dark Mode"
             onClick={() => handleThemeToggle()}
           >
@@ -135,7 +135,7 @@ const DarkModeToggle = () => {
         )}
       </div>
     )
-  );
-};
+  )
+}
 
-export default DarkModeToggle;
+export default DarkModeToggle
