@@ -1,4 +1,4 @@
-module.exports = {
+const lime = {
   lime: {
     100: 'hsl(85, 50.0%, 98.7%)',
     200: 'hsl(85, 66.7%, 96.5%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(83, 100%, 94.2%, 0.980)',
   },
 }
+
+export default lime

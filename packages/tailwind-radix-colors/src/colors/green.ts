@@ -1,4 +1,4 @@
-module.exports = {
+const green = {
   green: {
     100: 'hsl(136, 50.0%, 98.9%)',
     200: 'hsl(138, 62.5%, 96.9%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(137, 100%, 95.8%, 0.980)',
   },
 }
+
+export default green

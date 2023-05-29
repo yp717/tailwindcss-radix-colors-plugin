@@ -1,4 +1,4 @@
-module.exports = {
+const sky = {
   sky: {
     100: 'hsl(193, 100%, 98.8%)',
     200: 'hsl(193, 100%, 97.3%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(189, 100%, 96.8%, 0.980)',
   },
 }
+
+export default sky

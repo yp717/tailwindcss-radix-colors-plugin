@@ -1,4 +1,4 @@
-module.exports = {
+const red = {
   red: {
     100: 'hsl(359, 100%, 99.4%)',
     200: 'hsl(359, 100%, 98.6%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(352, 100%, 97.1%, 0.980)',
   },
 }
+
+export default red

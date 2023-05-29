@@ -1,4 +1,4 @@
-module.exports = {
+const mint = {
   mint: {
     100: 'hsl(165, 80.0%, 98.8%)',
     200: 'hsl(164, 88.2%, 96.7%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(169, 100%, 96.2%, 0.980)',
   },
 }
+
+export default mint

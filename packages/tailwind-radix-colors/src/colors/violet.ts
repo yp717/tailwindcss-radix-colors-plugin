@@ -1,4 +1,4 @@
-module.exports = {
+const violet = {
   violet: {
     100: 'hsl(255, 65.0%, 99.4%)',
     200: 'hsl(252, 100%, 99.0%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(254, 100%, 97.5%, 0.980)',
   },
 }
+
+export default violet

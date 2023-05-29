@@ -1,4 +1,4 @@
-module.exports = {
+const purple = {
   purple: {
     100: 'hsl(280, 65.0%, 99.4%)',
     200: 'hsl(276, 100%, 99.0%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(286, 100%, 97.1%, 0.980)',
   },
 }
+
+export default purple

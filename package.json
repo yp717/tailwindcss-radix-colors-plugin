@@ -11,8 +11,8 @@
     "test:prettier": "prettier --check \"**/*.{ts,tsx,md}\"",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "turbo build --filter=tailwind-radix-plugin && changeset publish"
+    "release": "turbo build --filter=tailwind-radix-plugin && changeset publish",
+    "publish-packages": "turbo run build lint && changeset version && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",

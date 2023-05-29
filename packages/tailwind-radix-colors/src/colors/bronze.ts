@@ -1,4 +1,4 @@
-module.exports = {
+const bronze = {
   bronze: {
     100: 'hsl(15, 30.0%, 99.1%)',
     200: 'hsl(17, 63.6%, 97.8%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(20, 99.8%, 96.4%, 0.974)',
   },
 }
+
+export default bronze

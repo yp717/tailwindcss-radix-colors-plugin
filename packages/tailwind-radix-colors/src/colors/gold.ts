@@ -1,4 +1,4 @@
-module.exports = {
+const gold = {
   gold: {
     100: 'hsl(50, 20.0%, 99.1%)',
     200: 'hsl(47, 52.9%, 96.7%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(49, 98.6%, 96.7%, 0.966)',
   },
 }
+
+export default gold

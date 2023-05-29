@@ -1,4 +1,4 @@
-module.exports = {
+const teal = {
   teal: {
     100: 'hsl(165, 60.0%, 98.8%)',
     200: 'hsl(169, 64.7%, 96.7%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(166, 98.6%, 95.0%, 0.979)',
   },
 }
+
+export default teal

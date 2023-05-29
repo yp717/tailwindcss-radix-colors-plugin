@@ -1,4 +1,4 @@
-module.exports = {
+const grass = {
   grass: {
     100: 'hsl(116, 50.0%, 98.9%)',
     200: 'hsl(120, 60.0%, 97.1%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(137, 100%, 95.8%, 0.980)',
   },
 }
+
+export default grass

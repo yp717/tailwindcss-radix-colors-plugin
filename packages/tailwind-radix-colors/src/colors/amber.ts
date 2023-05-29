@@ -1,4 +1,4 @@
-module.exports = {
+const amber = {
   amberLight: {
     100: 'hsl(39, 70.0%, 99.0%)',
     200: 'hsl(40, 100%, 96.5%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(45, 100%, 94.2%, 0.980)',
   },
 }
+
+export default amber

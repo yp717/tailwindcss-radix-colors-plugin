@@ -1,4 +1,4 @@
-module.exports = {
+const sand = {
   sand: {
     100: 'hsl(50, 20.0%, 99.0%)',
     200: 'hsl(60, 7.7%, 97.5%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(60, 88.7%, 99.8%, 0.923)',
   },
 }
+
+export default sand

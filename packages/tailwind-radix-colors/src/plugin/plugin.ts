@@ -1,12 +1,12 @@
-// @ts-nocheck
-const radix = require('./src/colors')
-const plugin = require('tailwindcss/plugin')
-const parseHSLAColor = require('./parseHSLAColor')
+import radix from '../colors'
+import plugin from 'tailwindcss/plugin'
+import { parseHSLAColor } from '../utils'
 
 const tailwindRadixPlugin = plugin.withOptions(
+  // @ts-ignore
   ({ colors = radix, rootSelector = ':root' } = {}) => {
-    let rootColors = {}
-    let darkModeColors = {}
+    let rootColors: Record<string, string> = {}
+    let darkModeColors: Record<string, string> = {}
 
     for (const [colorName, colorObj] of Object.entries(colors)) {
       for (const [weight, value] of Object.entries(colorObj)) {
@@ -38,7 +38,7 @@ const tailwindRadixPlugin = plugin.withOptions(
     }
 
     return ({ addBase, config }) => {
-      const [darkMode, className = '.dark'] = [].concat(
+      const [darkMode, className = '.dark'] = ([] as string[]).concat(
         config('darkMode', 'media'),
       )
 
@@ -91,7 +91,7 @@ const tailwindRadixPlugin = plugin.withOptions(
     ]
 
     const variants = ['', 'A', 'Light', 'LightA', 'Dark', 'DarkA']
-    const themeColors = {}
+    const themeColors: Record<string, unknown> = {}
 
     for (const color of colors) {
       for (const variant of variants) {

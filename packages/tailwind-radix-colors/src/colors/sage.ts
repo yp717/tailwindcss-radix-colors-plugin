@@ -1,4 +1,4 @@
-module.exports = {
+const sage = {
   sage: {
     100: 'hsl(155, 30.0%, 98.8%)',
     200: 'hsl(150, 16.7%, 97.6%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(149, 93.3%, 99.6%, 0.927)',
   },
 }
+
+export default sage

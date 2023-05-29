@@ -1,4 +1,4 @@
-module.exports = {
+const tomato = {
   tomato: {
     100: 'hsl(10, 100%, 99.4%)',
     200: 'hsl(8, 100%, 98.4%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(12, 100%, 97.1%, 0.980)',
   },
 }
+
+export default tomato

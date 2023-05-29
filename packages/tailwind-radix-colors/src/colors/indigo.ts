@@ -1,4 +1,4 @@
-module.exports = {
+const indigo = {
   indigo: {
     100: 'hsl(225, 60.0%, 99.4%)',
     200: 'hsl(223, 100%, 98.6%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(226, 100%, 97.5%, 0.980)',
   },
 }
+
+export default indigo

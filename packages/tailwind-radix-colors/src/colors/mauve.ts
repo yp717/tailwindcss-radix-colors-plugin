@@ -1,4 +1,4 @@
-module.exports = {
+const mauve = {
   mauve: {
     100: 'hsl(300, 20.0%, 99.0%)',
     200: 'hsl(300, 7.7%, 97.5%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(240, 93.9%, 99.6%, 0.931)',
   },
 }
+
+export default mauve

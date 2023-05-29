@@ -1,4 +1,4 @@
-module.exports = {
+const crimson = {
   crimsonLight: {
     100: 'hsl(332, 100%, 99.4%)',
     200: 'hsl(330, 100%, 98.4%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(327, 100%, 97.1%, 0.980)',
   },
 }
+
+export default crimson

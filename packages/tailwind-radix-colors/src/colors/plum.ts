@@ -1,4 +1,4 @@
-module.exports = {
+const plum = {
   plum: {
     100: 'hsl(292, 90.0%, 99.4%)',
     200: 'hsl(300, 100%, 98.6%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(300, 100%, 97.1%, 0.980)',
   },
 }
+
+export default plum

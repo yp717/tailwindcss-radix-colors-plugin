@@ -1,4 +1,4 @@
-module.exports = {
+const olive = {
   olive: {
     100: 'hsl(110, 20.0%, 99.0%)',
     200: 'hsl(120, 16.7%, 97.6%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(120, 93.5%, 99.6%, 0.927)',
   },
 }
+
+export default olive

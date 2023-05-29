@@ -1,4 +1,4 @@
-module.exports = {
+const pink = {
   pink: {
     100: 'hsl(322, 100%, 99.4%)',
     200: 'hsl(323, 100%, 98.4%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(314, 100%, 96.9%, 0.980)',
   },
 }
+
+export default pink

@@ -1,4 +1,4 @@
-module.exports = {
+const orange = {
   orange: {
     100: 'hsl(24, 70.0%, 99.0%)',
     200: 'hsl(24, 83.3%, 97.6%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(26, 100%, 94.2%, 0.980)',
   },
 }
+
+export default orange

@@ -1,4 +1,4 @@
-module.exports = {
+const cyan = {
   cyan: {
     100: 'hsl(185, 60.0%, 98.7%)',
     200: 'hsl(185, 73.3%, 97.1%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(185, 99.8%, 95.1%, 0.978)',
   },
 }
+
+export default cyan

@@ -1,4 +1,4 @@
-module.exports = {
+const gray = {
   gray: {
     100: 'hsl(0, 0%, 99.0%)',
     200: 'hsl(0, 0%, 97.3%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(0, 0%, 100%, 0.923)',
   },
 }
+
+export default gray

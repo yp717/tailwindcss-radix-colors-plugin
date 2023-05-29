@@ -1,4 +1,4 @@
-module.exports = {
+const brown = {
   brown: {
     100: 'hsl(30, 40.0%, 99.1%)',
     200: 'hsl(30, 50.0%, 97.6%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(32, 98.2%, 95.7%, 0.979)',
   },
 }
+
+export default brown

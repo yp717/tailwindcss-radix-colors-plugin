@@ -1,4 +1,4 @@
-module.exports = {
+const slate = {
   slate: {
     100: 'hsl(206, 30.0%, 98.8%)',
     200: 'hsl(210, 16.7%, 97.6%)',
@@ -56,3 +56,5 @@ module.exports = {
     1200: 'hsla(211, 86.7%, 99.6%, 0.927)',
   },
 }
+
+export default slate
