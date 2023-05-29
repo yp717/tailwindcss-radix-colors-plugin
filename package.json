@@ -1,4 +1,5 @@
 {
+  "name": "tailwind-radix-plugin",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -8,16 +9,19 @@
     "test:lint": "npm run test:eslint && npm run test:prettier",
     "test:eslint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
     "test:prettier": "prettier --check \"**/*.{ts,tsx,md}\"",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo build --filter=tailwind-radix-plugin && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "@turbo/gen": "^1.9.7",
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
     "prettier": "^2.8.8",
     "turbo": "^1.9.7"
   },
-  "name": "tailwind-radix-plugin",
   "packageManager": "npm@9.4.2",
   "workspaces": [
     "apps/*",
