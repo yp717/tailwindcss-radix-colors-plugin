@@ -18,7 +18,7 @@ jobs:
     #  TURBO_REMOTE_ONLY: true
 
     steps:
-      - name: Check out code
+      - name: Check Repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 2
@@ -30,7 +30,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Test Linting
         run: npm run test:lint
