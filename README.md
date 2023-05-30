@@ -14,7 +14,7 @@ npm install tailwind-radix-plugin
 // tailwind.config.js
 module.exports = {
   plugins: [require('tailwind-radix-plugin')],
-};
+}
 ```
 
 ## Configuration
@@ -42,7 +42,7 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: The documentation site built  [Next.js](https://nextjs.org/) app
+- `docs`: The documentation site built [Next.js](https://nextjs.org/) app
 - `ui`: a stub React component library for the `docs` applications
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
