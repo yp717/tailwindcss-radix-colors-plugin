@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-radix-colors-plugin",
+  "name": "tailwindcss-radix-colors-plugin",
   "author": "Yannis Panagis",
   "version": "0.0.0",
   "main": "./dist/index.js",
