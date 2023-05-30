@@ -9,35 +9,27 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    name: Releasing
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout Repo
+        uses: actions/checkout@v2
 
-      - name: Creating .npmrc file
-        run: |
-          cp .npmrc.example .npmrc
-          sed -i "s/INSERT_YOUR_GITHUB_ACCESS_TOKEN_HERE/$NPM_TOKEN/g" .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Set Node.js Version
-        uses: actions/setup-node@v3
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@v2
         with:
-          node-version-file: '.nvmrc'
+          node-version: 16.x
           cache: 'npm'
 
       - name: Install Dependencies
         run: npm ci
 
-      - name: Create Release Pull Request or Publish to Github Registry
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
         uses: changesets/action@v1
         with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: npm run release
-          version: npm run version-packages
-          commit: 'chore: release package(s)'
-          title: 'chore: release package(s)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

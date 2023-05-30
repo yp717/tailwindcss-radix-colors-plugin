@@ -10,10 +10,9 @@
     "test:eslint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
     "test:prettier": "prettier --check \"**/*.{ts,tsx,md}\"",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "add-changeset": "changeset add",
+    "changeset": "changeset",
     "version-packages": "changeset version",
-    "prerelease": "npm run build",
-    "release": "changeset publish"
+    "release": "turbo build --filter=tailwind-radix-colors && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
