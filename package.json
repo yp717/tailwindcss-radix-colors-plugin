@@ -10,12 +10,15 @@
     "test:eslint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
     "test:prettier": "prettier --check \"**/*.{ts,tsx,md}\"",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "changeset": "changeset",
-    "release": "turbo build --filter=tailwind-radix-plugin && changeset publish",
-    "publish-packages": "turbo run build lint && changeset version && changeset publish"
+    "add-changeset": "changeset add",
+    "version-packages": "changeset version",
+    "prerelease": "npm run build",
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@turbo/gen": "^1.9.7",
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
