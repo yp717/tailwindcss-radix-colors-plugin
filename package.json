@@ -11,7 +11,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo build --filter=tailwind-radix-colors && changeset publish"
+    "release": "turbo build --filter=tailwind-radix-colors-plugin && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
