@@ -1,6 +1,6 @@
-import radix from '../colors'
+import radix from './colors'
 import plugin from 'tailwindcss/plugin'
-import { parseHSLAColor } from '../utils'
+import { parseHSLAColor } from './utils'
 
 const tailwindRadixPlugin = plugin.withOptions(
   // @ts-ignore
