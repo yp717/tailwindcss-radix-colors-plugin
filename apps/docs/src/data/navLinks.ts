@@ -1,7 +1,7 @@
 const navLinks = [
   {
     name: 'Overview',
-    path: '/overview',
+    href: '/overview',
   },
   {
     name: 'Quick Start Guide',

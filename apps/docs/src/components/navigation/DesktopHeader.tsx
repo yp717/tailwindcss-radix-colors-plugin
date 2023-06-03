@@ -4,17 +4,10 @@ import Link from 'next/link'
 
 import { GithubIcon } from '../../icons'
 import SearchBar from '../search/SearchBar'
+import { GithubLink } from '../links'
 
 interface IDesktopHeaderProps {
   className?: string
-}
-
-const GithubLink = () => {
-  return (
-    <Link href="https://github.com/yp717/tailwindcss-radix-colors-plugin">
-      <GithubIcon className="w-5 h-5 text-crimson-900" />
-    </Link>
-  )
 }
 
 const DesktopHeader = ({ className }: IDesktopHeaderProps) => {
