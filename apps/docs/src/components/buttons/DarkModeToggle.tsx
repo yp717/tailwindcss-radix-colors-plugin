@@ -7,7 +7,6 @@ const DarkModeToggle = () => {
   const { theme, setTheme } = useTheme()
 
   const handleThemeToggle = () => {
-    console.log('theme', theme)
     if (theme === 'light') {
       setTheme('dark')
     } else {

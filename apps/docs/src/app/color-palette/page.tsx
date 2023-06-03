@@ -1,11 +1,28 @@
 import { NextPage } from 'next'
 
 import ColorPalette from '../../components/palette/ColorPalette'
+import Link from 'next/link'
 
 const ColorPalettePage: NextPage = () => {
   return (
-    <div className="h-full prose dark:prose-invert">
-      <h1 className="text-gray-1200">Color Palette</h1>
+    <div className="h-full w-5xl">
+      <h1 className="text-slate-1200 text-4xl font-bold">Color Palette</h1>
+      <p className="text-slate-1100">
+        This plugin integrates the wonderful{' '}
+        <Link href="https://www.radix-ui.com/colors">
+          Radix UI Color Palette{' '}
+        </Link>
+        , (originally by <Link href="https://workos.com/">WorkOS</Link>) with
+        TailwindCSS. The Radix UI Color Palette is a set of colors that are
+        designed to work harmoniously together. The colors are designed to be
+        accessible and to provide a good contrast ratio. The best part is that
+        the colors are designed to automatically work with dark and light mode
+        through inversions. This provides designers and developers with a
+        consistent color palette for light and dark themes without even having
+        to manually adjust colors. All 30 colors are available in 4 variants,
+        and 12 weights out of the box with this plugin. This means you have
+        access to 1440 colors to choose from !
+      </p>
       <ColorPalette />
     </div>
   )
