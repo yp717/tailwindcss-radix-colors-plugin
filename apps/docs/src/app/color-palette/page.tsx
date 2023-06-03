@@ -4,8 +4,8 @@ import ColorPalette from '../../components/palette/ColorPalette'
 
 const ColorPalettePage: NextPage = () => {
   return (
-    <div className="h-full">
-      <p className="text-gray-1200">Color Palette</p>
+    <div className="h-full prose dark:prose-invert">
+      <h1 className="text-gray-1200">Color Palette</h1>
       <ColorPalette />
     </div>
   )
