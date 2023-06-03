@@ -1,3 +1,4 @@
+import PageLayout from '../components/PageLayout'
 import '../styles/globals.css'
 
 interface IRootLayoutProps {
@@ -6,8 +7,10 @@ interface IRootLayoutProps {
 
 const RootLayout = ({ children }: IRootLayoutProps) => {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="h-full bg-gray-50">
+      <body>
+        <PageLayout>{children}</PageLayout>
+      </body>
     </html>
   )
 }

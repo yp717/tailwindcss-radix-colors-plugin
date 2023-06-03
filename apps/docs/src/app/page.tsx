@@ -1,9 +1,8 @@
-import { Header } from 'ui'
-
 const Page = () => {
   return (
-    <div className="bg-gray-100 h-full">
-      <Header text="tailwindcss-radix-colors-plugin" />
+    <div className="h-full">
+      {/* <Header text="tailwindcss-radix-colors-plugin" /> */}
+      <p className="text-gray-100">Some text here</p>
     </div>
   )
 }

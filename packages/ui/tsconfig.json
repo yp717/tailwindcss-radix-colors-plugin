@@ -1,5 +1,5 @@
 {
   "extends": "tsconfig/react-library.json",
-  "include": ["."],
+  "include": [".", "../../apps/docs/src/components/Navigation.tsx"],
   "exclude": ["dist", "build", "node_modules"]
 }
