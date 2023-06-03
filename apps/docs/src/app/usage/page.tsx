@@ -1,9 +1,11 @@
-const Page = () => {
+import { NextPage } from 'next'
+
+const UsagePage: NextPage = () => {
   return (
     <div className="h-full">
-      <p className="text-gray-1200">Usage Page</p>
+      <p className="text-gray-1200">Usage</p>
     </div>
   )
 }
 
-export default Page
+export default UsagePage

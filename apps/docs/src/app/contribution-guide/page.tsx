@@ -1,4 +1,6 @@
-const Page = () => {
+import { NextPage } from 'next'
+
+const ContributionGuidePage: NextPage = () => {
   return (
     <div className="h-full">
       <p className="text-gray-1200">Contribution Guide Page</p>
@@ -6,4 +8,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default ContributionGuidePage
