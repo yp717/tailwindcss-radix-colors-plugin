@@ -4,16 +4,12 @@ const navLinks = [
     href: '/overview',
   },
   {
-    name: 'Quick Start Guide',
-    href: '/quick-start-guide',
+    name: 'Getting Started',
+    href: '/getting-started',
   },
   {
-    name: 'Installation',
-    href: '/installation',
-  },
-  {
-    name: 'Usage',
-    href: '/usage',
+    name: 'Advanced Usage',
+    href: '/advanced-usage',
   },
   {
     name: 'Color Palette (The Scales)',
