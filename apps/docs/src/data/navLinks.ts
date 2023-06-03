@@ -16,10 +16,6 @@ const navLinks = [
     href: '/usage',
   },
   {
-    name: 'Integration Guide for different frameworks (Coming Soon)',
-    href: '/integration-guide',
-  },
-  {
     name: 'Color Palette (The Scales)',
     href: '/color-palette',
   },

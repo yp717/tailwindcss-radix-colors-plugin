@@ -1,5 +1,5 @@
 import * as React from 'react'
-import navLinks from '../data/navLinks'
+import navLinks from '../../data/navLinks'
 import Link from 'next/link'
 
 interface IDesktopSidebarProps {
@@ -8,11 +8,11 @@ interface IDesktopSidebarProps {
 
 const DesktopSidebar = ({ className }: IDesktopSidebarProps) => {
   return (
-    <div className={`${className}`}>
-      <nav className="flex grow flex-col gap-y-5 overflow-y-auto bg-white p-4 shadow-sm">
-        <p className="text-sm font-semibold text-grayLight-1200">
+    <div className={`${className} bg-gray-100`}>
+      <nav className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-100 p-4 shadow-sm">
+        <Link className="text-sm font-semibold text-gray-1200" href="/">
           tailwindcss-radix-colors-plugin
-        </p>
+        </Link>
         <ul role="list" className="flex flex-1 flex-col gap-y-7">
           <li>
             <ul role="list" className="-mx-2 space-y-1">
@@ -20,7 +20,7 @@ const DesktopSidebar = ({ className }: IDesktopSidebarProps) => {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                    className="text-gray-1100 hover:text-crimson-900 hover:bg-gray-200 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                   >
                     {item.name}
                   </a>

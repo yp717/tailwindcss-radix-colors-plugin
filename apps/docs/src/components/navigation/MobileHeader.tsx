@@ -10,9 +10,9 @@ const MobileHeader = ({ className = '' }: IMobileHeaderProps) => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
   return (
     <div
-      className={`flex items-center justify-between gap-x-6 bg-white px-4 py-4 shadow-sm ${className}`}
+      className={`flex items-center justify-between gap-x-6 bg-gray-100 px-4 py-4 shadow-sm ${className}`}
     >
-      <p className="text-sm font-semibold text-grayLight-1200">
+      <p className="text-sm font-semibold text-gray-1200">
         tailwindcss-radix-colors-plugin
       </p>
       <button
