@@ -19,7 +19,9 @@ const PageLayout = ({ children }: IPageLayoutProps) => {
       <DesktopSidebar className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:w-80 lg:flex lg:flex-col" />
       <main className="pl-0 lg:pl-80 h-screen w-full flex flex-col">
         <DesktopHeader className="hidden lg:flex" />
-        <div className="p-4 h-full bg-gray-300">{children}</div>
+        <div className="p-4 h-full bg-gray-300 prose dark:prose-invert">
+          {children}
+        </div>
       </main>
     </div>
   )
