@@ -1,4 +1,4 @@
-import radix from './colors'
+import { colors as radix } from './colors'
 import plugin from 'tailwindcss/plugin'
 import { parseHSLAColor } from './utils'
 

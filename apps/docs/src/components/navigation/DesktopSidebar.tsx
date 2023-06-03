@@ -9,10 +9,12 @@ interface IDesktopSidebarProps {
 const DesktopSidebar = ({ className }: IDesktopSidebarProps) => {
   return (
     <div className={`${className} bg-gray-100`}>
-      <nav className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-100 p-4 shadow-sm">
-        <Link className="text-sm font-semibold text-gray-1200" href="/">
-          tailwindcss-radix-colors-plugin
-        </Link>
+      <nav className="flex grow flex-col overflow-y-auto bg-gray-100 p-4 shadow-sm">
+        <div className="h-16 pb-4 flex items-center">
+          <Link className="text-sm font-semibold text-gray-1200" href="/">
+            tailwindcss-radix-colors-plugin
+          </Link>
+        </div>
         <ul role="list" className="flex flex-1 flex-col gap-y-7">
           <li>
             <ul role="list" className="-mx-2 space-y-1">

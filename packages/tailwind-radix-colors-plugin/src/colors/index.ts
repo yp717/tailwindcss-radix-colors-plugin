@@ -27,7 +27,7 @@ import tomato from './tomato'
 import violet from './violet'
 import yellow from './yellow'
 
-const colors = {
+export const colors = {
   ...amber,
   ...blue,
   ...bronze,
@@ -57,5 +57,3 @@ const colors = {
   ...violet,
   ...yellow,
 }
-
-export default colors

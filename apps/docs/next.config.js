@@ -4,7 +4,7 @@ const withMDX = require('@next/mdx')()
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['ui'],
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   experimental: {
     mdxRs: true,
   },

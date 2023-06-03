@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { Bars3Icon } from '@heroicons/react/24/outline'
+import DarkModeToggle from '../buttons/DarkModeToggle'
 
 interface IMobileHeaderProps {
   className?: string
@@ -15,14 +16,17 @@ const MobileHeader = ({ className = '' }: IMobileHeaderProps) => {
       <p className="text-sm font-semibold text-gray-1200">
         tailwindcss-radix-colors-plugin
       </p>
-      <button
-        type="button"
-        className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
-        onClick={() => setSidebarOpen(true)}
-      >
-        <span className="sr-only">Open sidebar</span>
-        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-      </button>
+      <div className="flex gap-4">
+        <DarkModeToggle />
+        <button
+          type="button"
+          className="-m-2.5 p-2.5 text-gray-1000 lg:hidden"
+          onClick={() => setSidebarOpen(true)}
+        >
+          <span className="sr-only">Open sidebar</span>
+          <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+        </button>
+      </div>
     </div>
   )
 }
