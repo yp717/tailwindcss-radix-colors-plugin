@@ -23,6 +23,14 @@ const ColorPalettePage: NextPage = () => {
         and 12 weights out of the box with this plugin. This means you have
         access to 1440 colors to choose from !
       </p>
+      <p>
+        The only major difference between the original Radix UI Color Palette
+        and how this palette is implemented is that we multiply the weights by
+        100, so instead of using the 1-12 scal,e we use the 100-1200 scale. This
+        is because this is more familiar for users of TailwindCSS and other
+        weighted color palettes, and its also easier on the eyes in the markup
+        to spot the difference between a color and a weight.
+      </p>
       <ColorPalette />
     </div>
   )

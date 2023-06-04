@@ -23,10 +23,6 @@ const navLinks = [
     name: 'Contribution Guide',
     href: '/contribution-guide',
   },
-  {
-    name: 'FAQs',
-    href: '/faqs',
-  },
 ]
 
 export default navLinks
