@@ -16,12 +16,8 @@ const navLinks = [
     href: '/color-palette',
   },
   {
-    name: 'Troubleshooting',
-    href: '/troubleshooting',
-  },
-  {
-    name: 'Contribution Guide',
-    href: '/contribution-guide',
+    name: 'Examples',
+    href: '/examples',
   },
 ]
 
