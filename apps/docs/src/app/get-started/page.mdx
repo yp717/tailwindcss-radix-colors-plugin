@@ -1,0 +1,51 @@
+# Getting Started
+
+## Prerequisites
+
+Before using tailwindcss-radix-colors-plugin, ensure you meet the following prerequisites:
+
+- You're using Node.js version 12 or newer.
+- Your project uses Tailwind CSS 2.0 or newer.
+- Your project is set up to process CSS with PostCSS. If you're using a tool like Create React App, Next.js, or Gatsby, you're already set.
+
+## Installation
+
+Install tailwindcss-radix-colors-plugin with npm:
+
+```{bash}
+npm install tailwindcss-radix-colors-plugin
+```
+
+## Basic Usage
+
+In your Tailwind CSS configuration file (tailwind.config.js), import the plugin and add it to your configuration:
+
+```{bash}
+const { tailwindRadixPlugin } = require('tailwindcss-radix-colors-plugin')
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  darkMode: 'class',
+  theme: {
+    // your theme configuration
+  },
+  variants: {
+    // your variants configuration
+  },
+  plugins: [
+    tailwindRadixPlugin(),
+    // your other plugins
+  ],
+}
+```
+
+After adding the plugin to your configuration, your Tailwind CSS utility classes will have access to Radix color palette. You can use these classes like any other utility classes provided by Tailwind CSS:
+
+```{bash}
+<div className="text-crimson-500 bg-indigo-1000">
+  <!-- your content -->
+</div>
+```
+
+`tailwindcss-radix-colors-plugin` is designed to work seamlessly with your existing Tailwind CSS configuration. The rest of your Tailwind CSS config will be untouched.

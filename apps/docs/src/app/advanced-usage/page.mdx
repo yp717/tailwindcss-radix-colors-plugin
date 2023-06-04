@@ -1,0 +1,94 @@
+# Advanced Usage
+
+## Tailwind Dark Mode using Class vs Media
+
+Tailwind has a built-in dark mode feature that allows you to toggle between light and dark mode using the `class` attribute. This is great for simple use cases, but it can be a bit cumbersome to use in more complex scenarios.
+
+Dark Mode is a first-class citizen of many apps and operating systems on the web, which means users almost expect it to be available on your site.
+
+Tailwind comes with a built in `dark` variant that allows you to toggle between light and dark mode to style your site differently when dark mode is enabled.
+
+### Media Strategy
+
+By default, TailwindCSS uses what it calls the `media` strategy. Under the hood this uses the `prefers-color-scheme` CSS media feature, and is set up to automatically switch between light and dark mode based on the user's system preferences by setting the strategy like this in the tailwind config:
+
+```{javascript}
+module.exports = {
+  // ...
+  darkMode: 'media',
+  // ...
+}
+```
+
+### Class Strategy
+
+Tailwind also let's you toggle dark mode manually using the `class` strategy.
+
+The only difference is in the tailwind config file, where you can set which strategy you want to use.
+
+```{javascript}
+module.exports = {
+  darkMode: 'class',
+  // ...
+}
+```
+
+When you are using the `class` strategy, the dark variants will be applied whenever the `dark` class is present on the `html` element of the tree.
+
+```
+<!-- Dark mode not enabled -->
+<html>
+<body>
+  <!-- Will be white -->
+  <div class="bg-white dark:bg-black">
+    <!-- ... -->
+  </div>
+</body>
+</html>
+
+<!-- Dark mode enabled -->
+<html class="dark">
+<body>
+  <!-- Will be black -->
+  <div class="bg-white dark:bg-black">
+    <!-- ... -->
+  </div>
+</body>
+</html>
+```
+
+### Summary
+
+In summary, in either case the markup you are writing will look the same but it is the underlying implementation that is different.
+
+For more information about how Dark Mode works in tailwind, check out the [official documentation](https://tailwindcss.com/docs/dark-mode) - P.S. it's awesome!
+
+## Specific Color Inclusion
+
+You can choose to include a specific subset of colors from the Radix palette. Pass an options object to the plugin function in your tailwind.config.js:
+
+```{javascript}
+plugins: [
+  tailwindRadixPlugin({
+    colors: ['red', 'blue', 'green'],
+  }),
+  // ...
+],
+```
+
+## Specific Color Exclusion
+
+While not generally recommended, you can exclude specific colors, variants, or weights. This can be useful if you're looking to reduce your CSS bundle size:
+
+```{javascript}
+plugins: [
+  tailwindRadixPlugin({
+    exclude: {
+      colors: ['yellow'],
+      variants: ['dark'],
+      weights: ['500', '600'],
+    },
+  }),
+  // ...
+],
+```
