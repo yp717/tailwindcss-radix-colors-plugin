@@ -1,2 +1,2 @@
 export { default as tailwindRadixPlugin } from './tailwindRadixPlugin'
-export { colors } from './colors';
+export { colors } from './colors'
