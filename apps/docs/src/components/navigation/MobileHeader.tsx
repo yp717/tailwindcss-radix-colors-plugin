@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import Link from 'next/link'
+
 import { Bars3Icon } from '@heroicons/react/24/outline'
 import DarkModeToggle from '../buttons/DarkModeToggle'
 
@@ -13,9 +15,9 @@ const MobileHeader = ({ className = '' }: IMobileHeaderProps) => {
     <div
       className={`flex items-center justify-between gap-x-6 bg-gray-100 px-4 py-4 shadow-sm ${className}`}
     >
-      <p className="text-sm font-semibold text-gray-1200">
-        tailwindcss-radix-colors-plugin
-      </p>
+      <Link className="text-sm font-semibold text-gray-1200" href="/">
+        <span className="mr-1">🎨</span> tailwindcss-radix-colors-plugin
+      </Link>
       <div className="flex gap-4">
         <DarkModeToggle />
         <button

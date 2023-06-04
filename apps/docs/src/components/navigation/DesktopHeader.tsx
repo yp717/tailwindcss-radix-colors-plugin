@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import SearchBar from '../search/SearchBar'
-import { GithubLink } from '../links'
+// import SearchBar from '../search/SearchBar'
+import { GithubLink, TwitterLink } from '../links'
 import DarkModeToggle from '../buttons/DarkModeToggle'
 
 interface IDesktopHeaderProps {
@@ -11,10 +11,11 @@ interface IDesktopHeaderProps {
 const DesktopHeader = ({ className }: IDesktopHeaderProps) => {
   return (
     <div
-      className={`p-4 bg-gray-100 shadow-sm flex items-center justify-between ${className}`}
+      className={`p-4 bg-gray-100 shadow-sm flex items-center justify-end ${className}`}
     >
-      <SearchBar />
+      {/* <SearchBar /> */}
       <div className="flex items-center gap-4">
+        <TwitterLink />
         <GithubLink />
         <DarkModeToggle />
       </div>

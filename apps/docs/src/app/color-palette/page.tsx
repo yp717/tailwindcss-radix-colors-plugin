@@ -26,7 +26,7 @@ const ColorPalettePage: NextPage = () => {
       <p className="text-slate-1100">
         The only major difference between the original Radix UI Color Palette
         and how this palette is implemented is that we multiply the weights by
-        100, so instead of using the 1-12 scal,e we use the 100-1200 scale. This
+        100, so instead of using the 1-12 scale, we use the 100-1200 scale. This
         is because this is more familiar for users of TailwindCSS and other
         weighted color palettes, and its also easier on the eyes in the markup
         to spot the difference between a color and a weight.
