@@ -11,7 +11,7 @@ interface IDesktopHeaderProps {
 const DesktopHeader = ({ className }: IDesktopHeaderProps) => {
   return (
     <div
-      className={`p-4 bg-gray-100 shadow-sm flex items-center justify-end ${className}`}
+      className={`p-4 bg-gray-100 border-b border-gray-300 shadow-sm flex items-center justify-end ${className}`}
     >
       {/* <SearchBar /> */}
       <div className="flex items-center gap-4">
