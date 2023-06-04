@@ -1,5 +1,8 @@
 # tailwindcss-radix-colors-plugin
 
+![GitHub](https://img.shields.io/github/license/yp717/tailwindcss-radix-colors-plugin)
+![npm](https://img.shields.io/npm/v/tailwindcss-radix-colors-plugin)
+
 ## Overview
 
 Welcome to the world of superior color control with our Radix Colors for Tailwind CSS plugin. Designed to seamlessly enhance your Tailwind CSS projects, this plugin effortlessly incorporates the dynamic Radix color palette into your design workflow. Simplify your color management process while maintaining design consistency across your projects.
