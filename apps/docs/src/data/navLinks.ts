@@ -4,8 +4,8 @@ const navLinks = [
     href: '/overview',
   },
   {
-    name: 'Getting Started',
-    href: '/getting-started',
+    name: 'Get Started',
+    href: '/get-started',
   },
   {
     name: 'Advanced Usage',
