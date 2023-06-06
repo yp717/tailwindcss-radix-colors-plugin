@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-radix-plugin",
+  "name": "tailwindcss-radix-colors-plugin",
   "private": true,
   "scripts": {
     "postinstall": "npm install --arch=x64 --platform=linux turbo && npm install --arch=arm64 --platform=darwin turbo",

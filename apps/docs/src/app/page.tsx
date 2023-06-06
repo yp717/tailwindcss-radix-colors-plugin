@@ -5,8 +5,8 @@ const Page = () => {
   return (
     <div>
       <div className="absolute top-0 left-0" />
-      <div className="relative h-full flex flex-col gap-4 text-center items-center h-full w-full">
-        <p className="text-gray-1200 font-bold text-7xl md:text-8xl lg:text-9xl my-4 mt-20">
+      <div className="relative flex flex-col items-center w-full h-full gap-4 text-center">
+        <p className="my-4 mt-20 font-bold text-gray-1200 text-7xl md:text-8xl lg:text-9xl">
           <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-crimsonDark-1000 to-amberDark-900">
             Elevate
           </span>{' '}
@@ -22,7 +22,7 @@ const Page = () => {
         </p>
         <Link
           href="/get-started"
-          className="rounded-lg border-4 text-grayLight-1200 border-grayLight-1000 bg-slateLight-100 w-min whitespace-nowrap px-6 py-2 no-underline mb-20"
+          className="px-6 py-2 mb-20 no-underline border-4 rounded-lg text-grayLight-1200 border-grayLight-1000 bg-slateLight-100 w-min whitespace-nowrap"
         >
           Get Started
         </Link>

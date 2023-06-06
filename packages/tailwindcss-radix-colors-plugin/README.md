@@ -89,6 +89,8 @@ module.exports = {
 }
 ```
 
+NOTE: Please note that you should not use the 'media' strategy if you want to support manual toggling.
+
 For more details, refer to the official [Tailwind CSS documentation](https://tailwindcss.com/).
 
 #### Including Specific Colors
