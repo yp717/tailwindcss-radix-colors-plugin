@@ -106,6 +106,10 @@ plugins: [
 ],
 ```
 
+You can specify either the specific light or dark variants of a color, or you can specify the general color you want to include. For example, you can set colors to ['redLight'] or ['redDark'], or you can set colors to ['red'] to include both the light and dark variants of the color.
+
+Please note if you are using NextJS you may need to restart your dev server after adding or removing colors.
+
 ### Excluding Specific Colors
 
 Although not generally recommended, you may exclude specific colors, variants, or weights to reduce your CSS bundle size:
