@@ -89,6 +89,8 @@ module.exports = {
 }
 ```
 
+NOTE: Please note that you should not use the 'media' strategy if you want to support manual toggling.
+
 For more details, refer to the official [Tailwind CSS documentation](https://tailwindcss.com/).
 
 #### Including Specific Colors
@@ -104,19 +106,6 @@ plugins: [
 ],
 ```
 
-### Excluding Specific Colors
+You can specify either the specific light or dark variants of a color, or you can specify the general color you want to include. For example, you can set colors to ['redLight'] or ['redDark'], or you can set colors to ['red'] to include both the light and dark variants of the color.
 
-Although not generally recommended, you may exclude specific colors, variants, or weights to reduce your CSS bundle size:
-
-```{javascript}
-plugins: [
-    tailwindRadixPlugin({
-        exclude: {
-            colors: ['yellow'],
-            variants: ['dark'],
-            weights: ['500', '600'],
-        },
-    }),
-    // ...
-],
-```
+Please note if you are using NextJS you may need to restart your dev server after adding or removing colors.

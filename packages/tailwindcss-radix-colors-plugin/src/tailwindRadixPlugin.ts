@@ -1,14 +1,52 @@
-import { colors as radix } from './colors'
 import plugin from 'tailwindcss/plugin'
-import { parseHSLAColor } from './utils'
 
-const tailwindRadixPlugin = plugin.withOptions(
-  // @ts-ignore
-  ({ colors = radix, rootSelector = ':root' } = {}) => {
+import { colors as radix } from './colors'
+import { parseHSLAColor } from './utils'
+import { PluginCreator, Config } from 'tailwindcss/types/config'
+
+type PluginOptionsType = {
+  colors?: string[]
+  rootSelector?: string
+}
+
+type TailwindPluginType = {
+  (options: PluginOptionsType): {
+    handler: PluginCreator
+    config?: Partial<Config> | undefined
+  }
+  __isOptionsFunction: true
+}
+
+/**
+ * Tailwind plugin that generates CSS variables for all colors in the radix color palette.
+ * @param options - Options for the plugin.
+ * @param options.colors - An array of color names to include in the plugin. Defaults to all colors in the radix color palette.
+ * @param options.rootSelector - The CSS selector to use for the root element. Defaults to `:root`.
+ * @returns A Tailwind plugin.
+ */
+const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
+  ({
+    colors = Object.keys(radix),
+    rootSelector = ':root',
+  }: PluginOptionsType = {}) => {
     let rootColors: Record<string, string> = {}
     let darkModeColors: Record<string, string> = {}
 
-    for (const [colorName, colorObj] of Object.entries(colors)) {
+    // Update the colors array to automatically include 'Light' and 'Dark' variants if they exist in the radix object
+    const updatedColors = colors.reduce((acc: string[], color: string) => {
+      acc.push(color)
+      if (radix[`${color}Light` as keyof typeof radix])
+        acc.push(`${color}Light`)
+      if (radix[`${color}Dark` as keyof typeof radix]) acc.push(`${color}Dark`)
+      return acc
+    }, [])
+
+    // Filter out the entries in radix that are not in the provided colors array
+    const filteredColors = Object.entries(radix).filter(([key]) =>
+      updatedColors.includes(key),
+    )
+
+    for (const [colorName, colorObj] of filteredColors) {
       for (const [weight, value] of Object.entries(colorObj)) {
         const { hue, saturation, lightness, alpha } = parseHSLAColor(value)
 
@@ -91,7 +129,7 @@ const tailwindRadixPlugin = plugin.withOptions(
     ]
 
     const variants = ['', 'A', 'Light', 'LightA', 'Dark', 'DarkA']
-    const themeColors: Record<string, unknown> = {}
+    const themeColors: Record<string, Record<number, string>> = {}
 
     for (const color of colors) {
       for (const variant of variants) {

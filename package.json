@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-radix-plugin",
+  "name": "tailwindcss-radix-colors-plugin",
   "private": true,
   "scripts": {
     "postinstall": "npm install --arch=x64 --platform=linux turbo && npm install --arch=arm64 --platform=darwin turbo",
@@ -22,7 +22,7 @@
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
     "prettier": "^2.8.8",
-    "turbo": "^1.10.1"
+    "turbo": "^1.10.3"
   },
   "packageManager": "npm@9.4.2",
   "workspaces": [
