@@ -1,5 +1,6 @@
-import { colors as radix } from './colors'
 import plugin from 'tailwindcss/plugin'
+
+import { colors as radix } from './colors'
 import { parseHSLAColor } from './utils'
 import { PluginCreator, Config } from 'tailwindcss/types/config'
 
@@ -7,6 +8,7 @@ type PluginOptionsType = {
   colors?: string[]
   rootSelector?: string
 }
+
 type TailwindPluginType = {
   (options: PluginOptionsType): {
     handler: PluginCreator
@@ -15,6 +17,13 @@ type TailwindPluginType = {
   __isOptionsFunction: true
 }
 
+/**
+ * Tailwind plugin that generates CSS variables for all colors in the radix color palette.
+ * @param options - Options for the plugin.
+ * @param options.colors - An array of color names to include in the plugin. Defaults to all colors in the radix color palette.
+ * @param options.rootSelector - The CSS selector to use for the root element. Defaults to `:root`.
+ * @returns A Tailwind plugin.
+ */
 const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
   ({
     colors = Object.keys(radix),
