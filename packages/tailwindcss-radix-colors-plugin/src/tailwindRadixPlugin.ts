@@ -31,6 +31,7 @@ const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
   }: PluginOptionsType = {}) => {
     let rootColors: Record<string, string> = {}
     let darkModeColors: Record<string, string> = {}
+    let lightModeColors: Record<string, string> = {}
 
     // Update the colors array to automatically include 'Light' and 'Dark' variants if they exist in the radix object
     const updatedColors = colors.reduce((acc: string[], color: string) => {
@@ -70,20 +71,24 @@ const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
             'Light',
             '',
           )}-${weight}`
-          rootColors[cssVarNameSwitch] = `var(--${colorName}-${weight})`
+          lightModeColors[cssVarNameSwitch] = `var(--${colorName}-${weight})`
         }
       }
     }
 
-    return ({ addBase, config }) => {
-      const [darkMode, className = '.dark'] = ([] as string[]).concat(
-        config('darkMode', 'media'),
-      )
+    return ({ addBase, addVariant, config }) => {
+      const [darkMode] = ([] as string[]).concat(config('darkMode', 'media'))
 
       if (darkMode === 'class') {
+        addVariant('pin-theme-dark', `:is(.pin-theme-dark &)`)
+        addVariant('pin-theme-light', `:is(.pin-theme-light &)`)
+
         addBase({
           [rootSelector]: rootColors,
-          [className]: darkModeColors,
+          ['.pin-theme-dark']: darkModeColors,
+          ['.pin-theme-light']: lightModeColors,
+          ['.dark']: darkModeColors,
+          ['.light']: lightModeColors,
         })
       } else {
         addBase({
