@@ -81,7 +81,7 @@ const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
 
       if (darkMode === 'class') {
         // This enables the use of light colors when overriding the dark theme in a specific subset of the DOM and a dark prefix has been used.
-        addVariant('light', `:is(:not(.dark) .light &)`)
+        addVariant('light', `:is(:not(.pin-theme-dark) .pin-theme-light &)`)
 
         addBase({
           [rootSelector]: rootColors,
