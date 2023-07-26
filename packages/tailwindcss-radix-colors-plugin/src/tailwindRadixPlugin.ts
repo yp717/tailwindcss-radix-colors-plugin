@@ -76,10 +76,13 @@ const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
       }
     }
 
-    return ({ addBase, config }) => {
+    return ({ addBase, addVariant, config }) => {
       const [darkMode] = ([] as string[]).concat(config('darkMode', 'media'))
 
       if (darkMode === 'class') {
+        // This enables the use of light colors when overriding the dark theme in a specific subset of the DOM and a dark prefix has been used.
+        addVariant('light', `:is(:not(.dark) .light &)`)
+
         addBase({
           [rootSelector]: rootColors,
           ['.dark']: darkModeColors,
