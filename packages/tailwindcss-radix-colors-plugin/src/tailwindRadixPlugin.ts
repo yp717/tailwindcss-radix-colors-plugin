@@ -76,17 +76,12 @@ const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
       }
     }
 
-    return ({ addBase, addVariant, config }) => {
+    return ({ addBase, config }) => {
       const [darkMode] = ([] as string[]).concat(config('darkMode', 'media'))
 
       if (darkMode === 'class') {
-        addVariant('pin-theme-dark', `:is(.pin-theme-dark &)`)
-        addVariant('pin-theme-light', `:is(.pin-theme-light &)`)
-
         addBase({
           [rootSelector]: rootColors,
-          ['.pin-theme-dark']: darkModeColors,
-          ['.pin-theme-light']: lightModeColors,
           ['.dark']: darkModeColors,
           ['.light']: lightModeColors,
         })
