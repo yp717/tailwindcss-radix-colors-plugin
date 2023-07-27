@@ -102,6 +102,13 @@ const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
         })
       }
 
+      if (darkMode === 'class') {
+        addBase({
+          [rootSelector]: rootColors,
+          [className]: darkModeColors,
+        })
+      }
+
       if (darkMode === 'media') {
         addBase({
           [rootSelector]: rootColors,
