@@ -1,7 +1,7 @@
-import { NextPage } from "next";
+import { NextPage } from 'next'
 
-import ColorPalette from "../../components/palette/ColorPalette";
-import Link from "next/link";
+import ColorPalette from '../../components/palette/ColorPalette'
+import Link from 'next/link'
 
 const ColorPalettePage: NextPage = () => {
   return (
@@ -34,41 +34,59 @@ const ColorPalettePage: NextPage = () => {
             gray-dark-1200
           </div>
           <div className="p-3 bg-gray-500 dark:bg-crimson-500 text-grayDark-1200">
-            The background light color is specified with auto inversion but the dark color is overwritten
+            The background light color is specified with auto inversion but the
+            dark color is overwritten
           </div>
           <div className="p-3 bg-grayLight-500 dark:bg-crimson-500 text-grayDark-1200 dark:text-yellow-500">
-            This should be the same as the above but the text also turns yellow on dark
+            This should be the same as the above but the text also turns yellow
+            on dark
           </div>
         </div>
 
         <div className="flex flex-col w-full gap-2">
-          <h3>Standard inversions with no theme pinning</h3>
+          <h3>Standard inversions with theme pinning</h3>
           <div className="p-3 pin-theme-light">
-            Regardless of the classnames the color themes should be pinned to light in this scope
-            <div className="p-3 bg-gray-1200"> the auto inversion should fix to the light theme</div>
-            <div className="p-3 bg-grayLight-1200">The light fixed variant should stay light and fixed</div>
-            <div className="p-3 bg-grayDark-1200">The dark fixed variant should stay dark and fixed</div>
+            Regardless of the classnames the color themes should be pinned to
+            light in this scope
+            <div className="p-3 bg-gray-1200">
+              The auto inversion should fix to the light theme
+            </div>
+            <div className="p-3 bg-grayLight-1200">
+              The light fixed variant should stay light and fixed
+            </div>
+            <div className="p-3 bg-grayDark-1200">
+              The dark fixed variant should stay dark and fixed
+            </div>
             {/* TODO: this is one to investigate */}
-            <div className="p-3 light:bg-gray-1200 dark:bg-crimson-500">A dark override is ignored and the light variant is used, even if above the scope the global theme is dark</div>
+            <div className="p-3 bg-gray-1200 dark:bg-crimsonDark-500">
+              A dark override is ignored and the light variant is used, even if
+              above the scope the global theme is dark
+            </div>
           </div>
           <div className="p-3 pin-theme-dark">
-            Regardless of the classnames the color themes should be pinned to dark in this scope
-            <div className="p-3 bg-gray-1200"> the auto inversion should fix to the dark theme</div>
-            <div className="p-3 bg-grayLight-1200">The light fixed variant should stay light and fixed</div>
-            <div className="p-3 bg-grayDark-1200">The dark fixed variant should stay dark and fixed</div>
+            Regardless of the classnames the color themes should be pinned to
+            dark in this scope
+            <div className="p-3 bg-gray-1200">
+              The auto inversion should fix to the dark theme
+            </div>
+            <div className="p-3 bg-grayLight-1200">
+              The light fixed variant should stay light and fixed
+            </div>
+            <div className="p-3 bg-grayDark-1200">
+              The dark fixed variant should stay dark and fixed
+            </div>
             {/* TODO: this is one to investigate */}
-            <div className="p-3 light:bg-gray-1200 dark:bg-crimson-500">The dark variant is used even if the global scope is light</div>
+            <div className="p-3 light:bg-gray-1200 dark:bg-crimson-500">
+              The dark variant is used even if the global scope is light
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="pin-theme-dark">
-        <div className="w-[100px] h-[100px] shadow dark:bg-red-400 rounded"></div>
-      </div>
       <p className="text-slate-1100">
-        This plugin integrates the wonderful{" "}
+        This plugin integrates the wonderful{' '}
         <Link href="https://www.radix-ui.com/colors">
-          Radix UI Color Palette{" "}
+          Radix UI Color Palette{' '}
         </Link>
         , (originally by <Link href="https://workos.com/">WorkOS</Link>) with
         TailwindCSS. The Radix UI Color Palette is a set of colors that are
@@ -91,7 +109,7 @@ const ColorPalettePage: NextPage = () => {
       </p>
       <ColorPalette />
     </div>
-  );
-};
+  )
+}
 
-export default ColorPalettePage;
+export default ColorPalettePage
