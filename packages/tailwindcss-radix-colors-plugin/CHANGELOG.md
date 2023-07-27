@@ -1,5 +1,11 @@
 # tailwindcss-radix-colors-plugin
 
+## 0.2.1
+
+### Patch Changes
+
+- Added condition to fix dark mode class behaviour after theme pinning was added
+
 ## 0.2.0
 
 ### Minor Changes
