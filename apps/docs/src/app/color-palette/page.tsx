@@ -6,7 +6,8 @@ import Link from 'next/link'
 const ColorPalettePage: NextPage = () => {
   return (
     <div className="h-full w-5xl">
-      <h1 className="text-slate-1200 text-4xl font-bold">Color Palette</h1>
+      <h1 className="text-4xl font-bold text-slate-1200">Color Palette</h1>
+
       <p className="text-slate-1100">
         This plugin integrates the wonderful{' '}
         <Link href="https://www.radix-ui.com/colors">

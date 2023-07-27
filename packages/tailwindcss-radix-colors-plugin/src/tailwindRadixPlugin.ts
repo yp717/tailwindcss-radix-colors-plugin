@@ -31,6 +31,7 @@ const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
   }: PluginOptionsType = {}) => {
     let rootColors: Record<string, string> = {}
     let darkModeColors: Record<string, string> = {}
+    let lightModeColors: Record<string, string> = {}
 
     // Update the colors array to automatically include 'Light' and 'Dark' variants if they exist in the radix object
     const updatedColors = colors.reduce((acc: string[], color: string) => {
@@ -70,22 +71,38 @@ const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
             'Light',
             '',
           )}-${weight}`
+          lightModeColors[cssVarNameSwitch] = `var(--${colorName}-${weight})`
           rootColors[cssVarNameSwitch] = `var(--${colorName}-${weight})`
         }
       }
     }
 
-    return ({ addBase, config }) => {
-      const [darkMode, className = '.dark'] = ([] as string[]).concat(
+    return ({ addBase, addVariant, config }) => {
+      let [darkMode, className = '.dark'] = ([] as string[]).concat(
         config('darkMode', 'media'),
       )
 
-      if (darkMode === 'class') {
+      if (typeof darkMode === 'undefined') {
+        darkMode = 'media'
+        console.warn('darkmode-false', [
+          'The `darkMode` option in your Tailwind CSS configuration is set to `false`, which now behaves the same as `media`.',
+          'NOTE: If you would like to use the pin-theme functionality in tailwindcss-radix-colors-plugin, set `darkMode` to `radix`!',
+          'https://tailwindcss.com/docs/upgrade-guide#remove-dark-mode-configuration',
+        ])
+      }
+
+      if (darkMode === 'radix') {
+        addVariant('dark', `:is(:is(${className}, .pin-theme-dark) &)`)
+
         addBase({
           [rootSelector]: rootColors,
           [className]: darkModeColors,
+          [`.pin-theme-light`]: lightModeColors,
+          [`.dark, .pin-theme-dark`]: darkModeColors,
         })
-      } else {
+      }
+
+      if (darkMode === 'media') {
         addBase({
           [rootSelector]: rootColors,
           '@media (prefers-color-scheme: dark)': {
