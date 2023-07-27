@@ -72,26 +72,37 @@ const tailwindRadixPlugin: TailwindPluginType = plugin.withOptions(
             '',
           )}-${weight}`
           lightModeColors[cssVarNameSwitch] = `var(--${colorName}-${weight})`
+          rootColors[cssVarNameSwitch] = `var(--${colorName}-${weight})`
         }
       }
     }
 
     return ({ addBase, addVariant, config }) => {
-      const [darkMode] = ([] as string[]).concat(config('darkMode', 'media'))
+      let [darkMode, className = '.dark'] = ([] as string[]).concat(
+        config('darkMode', 'media'),
+      )
 
-      if (darkMode === 'class') {
-        // This enables the use of light colors when overriding the dark theme in a specific subset of the DOM and a dark prefix has been used.
-        addVariant('light', `:is(:not(.pin-theme-dark) .pin-theme-light &)`)
-        addVariant('dark', `:is(:not(.pin-theme-light) .pin-theme-dark &)`)
+      if (typeof darkMode === 'undefined') {
+        darkMode = 'media'
+        console.warn('darkmode-false', [
+          'The `darkMode` option in your Tailwind CSS configuration is set to `false`, which now behaves the same as `media`.',
+          'NOTE: If you would like to use the pin-theme functionality in tailwindcss-radix-colors-plugin, set `darkMode` to `radix`!',
+          'https://tailwindcss.com/docs/upgrade-guide#remove-dark-mode-configuration',
+        ])
+      }
+
+      if (darkMode === 'radix') {
+        addVariant('dark', `:is(:is(${className}, .pin-theme-dark) &)`)
 
         addBase({
           [rootSelector]: rootColors,
-          ['.dark']: darkModeColors,
-          ['.light']: lightModeColors,
-          ['.dark .pin-theme-light']: lightModeColors,
-          ['.light .pin-theme-dark']: darkModeColors,
+          [className]: darkModeColors,
+          [`.pin-theme-light`]: lightModeColors,
+          [`.dark, .pin-theme-dark`]: darkModeColors,
         })
-      } else {
+      }
+
+      if (darkMode === 'media') {
         addBase({
           [rootSelector]: rootColors,
           '@media (prefers-color-scheme: dark)': {

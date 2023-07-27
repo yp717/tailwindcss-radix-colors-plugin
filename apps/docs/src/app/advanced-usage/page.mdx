@@ -92,3 +92,30 @@ plugins: [
   // ...
 ],
 ```
+
+## Theme Pinning
+
+If you want to pin a specific theme on a subset of elements in the DOM, you can do this by using the `pin-theme-light` and `pin-theme-dark` classNames. This enables you to have a top level theme on your application (that is light, dark, or can switch between both), and simultaneously fix a subset of the page to a specific theme.
+
+To enable this feature, you should set the `darkMode` option in your tailwind config to `radix`:
+
+```{javascript}
+module.exports = {
+  darkMode: 'radix',
+  // ...
+}
+```
+
+This is because of clashes between the Tailwind dark mode strategy and the radix strategy. Please note you only need to enable this feature if you want to use the `pin-theme-light` and `pin-theme-dark` classNames.
+
+```{html}
+<!-- Any divs in the scope of pin-theme-light will always be light themed -->
+<div class="pin-theme-light">
+  <div className="w-10 h-10 bg-green-500 dark:bg-crimson-500"></div>
+</div>
+
+<!-- Any divs in the scope of pin-theme-dark will always be dark themed -->
+<div class="pin-theme-dark">
+  <div className="w-10 h-10 bg-yellow-500 dark:bg-blue-500"></div>
+</div>
+```
