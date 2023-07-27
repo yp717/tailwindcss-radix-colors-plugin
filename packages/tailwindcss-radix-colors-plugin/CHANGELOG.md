@@ -1,5 +1,11 @@
 # tailwindcss-radix-colors-plugin
 
+## 0.2.0
+
+### Minor Changes
+
+- Added theme override functionality to allow users to pin themes on a subset of the DOM
+
 ## 0.1.0
 
 ### Minor Changes
