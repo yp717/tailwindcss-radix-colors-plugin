@@ -1,6 +1,10 @@
 {
   "name": "tailwindcss-radix-colors-plugin",
   "author": "Yannis Panagis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yp717/tailwindcss-radix-colors-plugin/tree/main"
+  },
   "version": "0.2.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

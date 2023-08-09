@@ -1,6 +1,10 @@
 {
   "name": "tailwindcss-radix-colors-plugin",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yp717/tailwindcss-radix-colors-plugin/tree/main"
+  },
   "scripts": {
     "postinstall": "npm install --arch=x64 --platform=linux turbo && npm install --arch=arm64 --platform=darwin turbo",
     "build": "turbo run build",
