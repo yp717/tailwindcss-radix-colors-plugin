@@ -9,28 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.15",
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@next/mdx": "^13.4.4",
-    "@tailwindcss/typography": "^0.5.9",
-    "@types/mdx": "^2.0.5",
-    "next": "^13.4.1",
+    "@next/mdx": "^13.5.2",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/mdx": "^2.0.7",
+    "next": "^13.5.2",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss-radix-colors-plugin": "*"
   },
   "devDependencies": {
-    "@types/node": "^17.0.12",
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "autoprefixer": "^10.4.14",
+    "@types/node": "^20.6.3",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.16",
     "eslint-config-custom": "*",
-    "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2",
+    "postcss": "^8.4.30",
+    "tailwindcss": "^3.3.3",
     "tsconfig": "*",
-    "typescript": "^4.5.3"
+    "typescript": "^5.2.2"
   }
 }
