@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ColorScale } from './types'
+import type { ColorScale } from './types'
 import ColorEntry from './ColorEntry'
 
 interface IColorScaleProps {
@@ -10,7 +10,7 @@ interface IColorScaleProps {
 const ColorScale = ({ name, scale }: IColorScaleProps) => {
   return (
     <div className="flex flex-row items-center justify-start w-full">
-      <p className="w-36 h-10 flex items-center m-0 text-slate-1100">{name}</p>
+      <p className="flex items-center h-10 m-0 w-36 text-slate-1100">{name}</p>
       <div className="flex flex-row items-center justify-center flex-grow w-full gap-1">
         {Object.entries(scale).map(([weight, value], index) => {
           return <ColorEntry key={index} value={value} />
