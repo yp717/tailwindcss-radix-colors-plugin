@@ -19,14 +19,14 @@
     "release": "turbo build --filter=tailwindcss-radix-colors-plugin && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.2",
-    "@commitlint/cli": "^17.8.1",
-    "@commitlint/config-conventional": "^18.1.0",
-    "@turbo/gen": "^1.10.16",
-    "eslint": "^8.53.0",
+    "@changesets/cli": "^2.27.8",
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "@turbo/gen": "^2.1.1",
+    "eslint": "^9.10.0",
     "eslint-config-custom": "*",
-    "prettier": "^3.0.3",
-    "turbo": "^1.10.16"
+    "prettier": "^3.3.3",
+    "turbo": "^2.1.1"
   },
   "packageManager": "npm@9.4.2",
   "workspaces": [

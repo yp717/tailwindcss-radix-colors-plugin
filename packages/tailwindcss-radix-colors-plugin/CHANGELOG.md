@@ -1,5 +1,11 @@
 # tailwindcss-radix-colors-plugin
 
+## 0.3.0
+
+### Minor Changes
+
+- Updated external project dependencies
+
 ## 0.2.4
 
 ### Patch Changes
