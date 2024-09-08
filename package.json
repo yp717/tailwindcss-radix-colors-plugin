@@ -22,8 +22,10 @@
     "@changesets/cli": "^2.27.8",
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.10.0",
     "@turbo/gen": "^2.1.1",
-    "eslint": "^9.10.0",
+    "eslint": "^8.57.0",
     "eslint-config-custom": "*",
     "prettier": "^3.3.3",
     "turbo": "^2.1.1"
