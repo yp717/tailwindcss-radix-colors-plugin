@@ -12,7 +12,7 @@ const Page = () => {
           </span>{' '}
           <br /> 
           <span
-          className="text-crimsonDark-500"
+          className="text-crimson-1200"
           >your styling</span>
         </p>
         <p className="text-xl text-gray-1000">
