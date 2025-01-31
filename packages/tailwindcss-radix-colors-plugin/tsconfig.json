@@ -1,5 +1,9 @@
 {
   "extends": "tsconfig/base.json",
   "include": ["."],
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
+  },
   "exclude": ["dist", "build", "node_modules"]
 }
