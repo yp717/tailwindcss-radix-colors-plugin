@@ -1,4 +1,5 @@
 @theme {
+    /* Remove all of the deafult color styles coming from tailwind */
     --color-*: initial;
 
     /* Amber */
