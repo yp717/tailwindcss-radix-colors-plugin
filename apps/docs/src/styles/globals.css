@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+@import "./theme.css";
+/* @plugin "tailwindcss-radix-colors-plugin"; */
+
 .grainy-gradient {
   filter: contrast(750%) brightness(100%);
   background: linear-gradient(
