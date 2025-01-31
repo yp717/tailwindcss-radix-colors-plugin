@@ -1,5 +1,9 @@
 {
   "extends": "tsconfig/base.json",
   "include": ["."],
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext"
+  },
   "exclude": ["dist", "build", "node_modules"]
 }

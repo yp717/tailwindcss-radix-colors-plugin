@@ -10,7 +10,10 @@ const Page = () => {
           <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-crimsonDark-1000 to-amberDark-900">
             Elevate
           </span>{' '}
-          <br /> your styling
+          <br /> 
+          <span
+          className="text-crimsonDark-500"
+          >your styling</span>
         </p>
         <p className="text-xl text-gray-1000">
           A powerfully simple npm package to seamlessly integrate{' '}

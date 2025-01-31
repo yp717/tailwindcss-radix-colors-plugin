@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 .grainy-gradient {
   filter: contrast(750%) brightness(100%);
